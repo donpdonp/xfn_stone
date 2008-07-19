@@ -1,0 +1,9 @@
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+lib/xfn_stone.rb
+lib/xfn_stone/document.rb
+lib/xfn_stone/person.rb
+spec/person.rb
+spec/spec_helper.rb

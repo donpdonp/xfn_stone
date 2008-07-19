@@ -1,0 +1,10 @@
+=== 0.0.2 / 2008-02-23
+
+* Moved from REXML to Hpricot
+  * Hpricot can handle lots of pseudo-xml
+
+=== 0.0.1 / 2008-02-19
+
+* 1 major enhancement
+  * Birthday!
+
