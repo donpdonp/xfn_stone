@@ -2,6 +2,14 @@ require File.join(File.dirname(__FILE__), *%w[spec_helper])
 require File.join(File.dirname(__FILE__), *%w[../lib/xfn_stone.rb])
 
 describe XfnStone::Person do
+
+  before(:each) do
+    html_page = open(File.dirname(__FILE__)+"/html/bob.html")
+    XfnStone::Document.should_receive(:open).and_return(html_page)
+    @url = "http://localhost"
+    @person = XfnStone::Person.new(@url)
+  end
+
   it "should know its load URL" do
     @person.uri.to_s.should == @url
   end
@@ -15,14 +23,7 @@ describe XfnStone::Person do
   end
 
   it "should return the contact links found in the document" do
-    @person.friends.size.should == 2
-  end
-
-  before(:each) do
-    html_page = open(File.join(File.dirname(__FILE__),"bob.html"))
-    XfnStone::Document.should_receive(:open).and_return(html_page)
-    @url = "http://localhost"
-    @person = XfnStone::Person.new(@url)
+    @person.contacts.size.should == 2
   end
 end
 
