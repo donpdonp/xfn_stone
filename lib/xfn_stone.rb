@@ -8,5 +8,5 @@ require 'xfn_stone/document.rb'
 require 'xfn_stone/person.rb'
 
 module XfnStone
-  VERSION = '0.0.5'
+  VERSION = '0.0.6'
 end
