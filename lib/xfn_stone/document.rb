@@ -2,6 +2,16 @@
 #we're parsing HTML now
 require 'hpricot'
 
+module Hpricot
+  class Elements
+    def urls
+      self.map do |fragment|
+        fragment.attributes["href"]
+      end
+    end
+  end
+end
+
 module XfnStone
   # This is an empty subclass of hpricot. Substuting a 
   # different XML parser in the future will be easier this way.
