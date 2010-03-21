@@ -1,0 +1,5 @@
+## PROJECT::GENERAL
+coverage
+rdoc
+pkg
+*.gemspec

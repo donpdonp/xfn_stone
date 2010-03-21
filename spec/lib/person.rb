@@ -1,10 +1,10 @@
-require File.join(File.dirname(__FILE__), *%w[spec_helper])
-require File.join(File.dirname(__FILE__), *%w[../lib/xfn_stone.rb])
+require File.join(File.dirname(__FILE__), *%w[../spec_helper])
+require File.join(File.dirname(__FILE__), *%w[../../lib/xfn_stone.rb])
 
 describe XfnStone::Person do
 
   before(:each) do
-    html_page = open(File.dirname(__FILE__)+"/html/bob.html")
+    html_page = open(File.dirname(__FILE__)+"/../html/bob.html")
     XfnStone::Document.should_receive(:open).and_return(html_page)
     @url = "http://localhost"
     @person = XfnStone::Person.new(@url)
